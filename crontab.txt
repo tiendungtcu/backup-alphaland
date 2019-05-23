@@ -1,0 +1,7 @@
+@reboot /var/applications/elasticsearch/bin/elasticsearch
+@reboot /var/applications/prerender/prerender
+
+10 18 * * * sudo certbot renew >/var/log/ssl_renew.log
+0 * * * * /etc/webmin/bandwidth/rotate.pl
+@reboot cd /var/applications/furniture/bgnoithat && ./gradlew
+
