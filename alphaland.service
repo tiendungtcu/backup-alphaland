@@ -1,0 +1,12 @@
+[Unit]
+Description= Alphaland webserver Service
+[Service]
+User=root
+WorkingDirectory=/var/applications
+ExecStart=/var/applications/alphaland
+SuccessExitStatus=143
+TimeoutStopSec=10
+Restart=on-failure
+RestartSec=6
+[Install]
+WantedBy=multi-user.target
